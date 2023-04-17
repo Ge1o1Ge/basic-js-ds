@@ -103,15 +103,13 @@ class BinarySearchTree {
   remove(data) {
     const removeNode = function (node, data) {
       if (node === null) {
-        return null; // Если узел равен null, значит, искомое значение не найдено, возвращаем null
+        return null;
       }
 
       if (data < node.data) {
-        // Если искомое значение меньше значения текущего узла, рекурсивно вызываем removeNode для левого поддерева
         node.left = removeNode(node.left, data);
         return node;
       } else if (data > node.data) {
-        // Если искомое значение больше значения текущего узла, рекурсивно вызываем removeNode для правого поддерева
         node.right = removeNode(node.right, data);
         return node;
       } else {
