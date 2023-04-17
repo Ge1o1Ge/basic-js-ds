@@ -141,11 +141,19 @@ class BinarySearchTree {
   }
 
   min() {
-
+    let tempNode = this._root;
+    while (tempNode.left !== null) {
+      tempNode = tempNode.left;
+    }
+    return tempNode.data;
   }
 
   max() {
-
+    let tempNode = this._root;
+    while (tempNode.right !== null) {
+      tempNode = tempNode.right;
+    }
+    return tempNode.data;
   }
 }
 
